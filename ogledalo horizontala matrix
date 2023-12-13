@@ -1,0 +1,33 @@
+//ogledalo horizontalno
+#include <iostream>
+using namespace std;
+int main() {
+    int redici, koloni;
+    int matrix[100][100];
+    cin>>redici>>koloni;
+    for (int i = 0; i < redici; ++i) {
+        for (int j = 0; j < koloni; ++j) {
+            cin>>matrix[i][j];
+        }
+    }
+    for (int i = 0; i < redici; ++i) {
+        for (int j = 0; j < koloni; ++j) {
+            cout<<matrix[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    for (int i = redici-1; i >redici/2 ; --i) {
+        for (int j = 0; j < koloni; ++j) {
+            cout<<matrix[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    for (int i = redici/2; i >=0 ; --i) {
+        for (int j = 0; j < koloni; ++j) {
+            cout<<matrix[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
