@@ -1,0 +1,25 @@
+//rekurzija faktoriel
+#include <iostream>
+using namespace std;
+int total(int n)
+{
+    if(n==1)
+    {
+        return 1;
+    }
+    else
+    {
+        return(n*total(n-1));
+    }
+}
+int main() {
+    int n;
+    cin>>n;
+    int suma;
+    suma=total(n);
+    for (int i = 1; i <n; ++i) {
+        cout<<i<<"! + ";
+    }
+    cout<<n<<"! = "<<suma<<endl;
+    return 0;
+}
