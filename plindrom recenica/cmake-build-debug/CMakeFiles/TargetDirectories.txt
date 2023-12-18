@@ -1,0 +1,3 @@
+C:/Users/bojan/OneDrive/Desktop/strpr/plindrom recenica/cmake-build-debug/CMakeFiles/plindrom_recenica.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/plindrom recenica/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/plindrom recenica/cmake-build-debug/CMakeFiles/rebuild_cache.dir
