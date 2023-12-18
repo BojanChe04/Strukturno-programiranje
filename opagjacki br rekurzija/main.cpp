@@ -1,31 +1,19 @@
-//rekurzija
-//brovervit brojov dali e vo opagjacki redosle
-//ako e vrakjat 1 vo sprotivo 0
+//zbir na cifri na parni pozicii
+//so rekurzivna funkcija
 #include <iostream>
 using namespace std;
-int funkcija(int broj){
-    if(broj<10){
-        return 1;
+int funk(int n,int pozicija, int zbir) {
+    if(n==0) {
+        return zbir;
     }
-    if(broj%10<broj/10%10){
-        return 1;
+    if(pozicija%2==0) {
+        zbir+=n%10;
     }
-    else if(broj%10>broj/10%10){
-        return 0;
-    }
-    else{
-        return funkcija(broj/10);
-    }
+    return funk(n/10,pozicija+1,zbir);
 }
 int main() {
     int n;
     cin>>n;
-    int broj;
-    while(n>0)
-    {
-        cin>>broj;
-        cout<<funkcija(broj)<<endl;
-        n--;
-    }
+    cout<<funk(n,1,0);
     return 0;
 }
