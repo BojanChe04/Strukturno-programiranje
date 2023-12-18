@@ -3,22 +3,23 @@
 #include<cstring>
 #include<string>
 #include<stdio.h>
+#include<ctype.h>
 using namespace std;
-int brojac(string zbor, char bukva ) {
+
+int main() {
+    char ch, niza[20], a;
     int br=0;
-    for (int i = 0; i < zbor.length(); ++i) {
-        if(zbor[i]==bukva) {
+    int i=0;
+    for (i = 0; i < 20 && (ch=getchar())!='\n'; ++i) {
+        niza[i]=ch;
+    }
+    niza[i]='\0';
+    for (int j = 0; j < 20 && (niza[i]!='\n'); ++j) {
+        if(niza[j]== ' ')
+        {
             br++;
         }
     }
-    return br;
-}
-int main() {
-    string zbor;
-    cin>>zbor;
-    cout<<zbor<<endl;
-    char bukva;
-    cin>>bukva;
-    cout<<brojac(zbor,bukva)<<endl;
+    cout<<br+1;
     return 0;
 }
