@@ -1,0 +1,3 @@
+C:/Users/bojan/OneDrive/Desktop/strpr/string povtoruvanje na bukva/cmake-build-debug/CMakeFiles/string_povtoruvanje_na_bukva.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/string povtoruvanje na bukva/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/string povtoruvanje na bukva/cmake-build-debug/CMakeFiles/rebuild_cache.dir
