@@ -1,0 +1,3 @@
+C:/Users/bojan/OneDrive/Desktop/strpr/zbir na parni pozicii rekurzija/cmake-build-debug/CMakeFiles/zbir_na_parni_pozicii_rekurzija.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/zbir na parni pozicii rekurzija/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/zbir na parni pozicii rekurzija/cmake-build-debug/CMakeFiles/rebuild_cache.dir
