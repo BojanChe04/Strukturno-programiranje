@@ -1,0 +1,3 @@
+C:/Users/bojan/OneDrive/Desktop/strpr/podniza vo niza/cmake-build-debug/CMakeFiles/podniza_vo_niza.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/podniza vo niza/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/podniza vo niza/cmake-build-debug/CMakeFiles/rebuild_cache.dir
