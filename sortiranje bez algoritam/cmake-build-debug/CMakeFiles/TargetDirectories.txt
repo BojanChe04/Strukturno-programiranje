@@ -1,0 +1,3 @@
+C:/Users/bojan/OneDrive/Desktop/strpr/sortiranje bez algoritam/cmake-build-debug/CMakeFiles/sortiranje_bez_algoritam.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/sortiranje bez algoritam/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/sortiranje bez algoritam/cmake-build-debug/CMakeFiles/rebuild_cache.dir
