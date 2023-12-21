@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.26)
+project(niza_zb_na_el_so_prethodnik_nova_niza_kreiraj_od_zb)
+
+set(CMAKE_CXX_STANDARD 20)
+
+add_executable(niza_zb_na_el_so_prethodnik_nova_niza_kreiraj_od_zb main.cpp)

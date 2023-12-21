@@ -1,0 +1,3 @@
+C:/Users/bojan/OneDrive/Desktop/strpr/niza,zb na el so prethodnik,nova niza kreiraj od zb/cmake-build-debug/CMakeFiles/niza_zb_na_el_so_prethodnik_nova_niza_kreiraj_od_zb.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/niza,zb na el so prethodnik,nova niza kreiraj od zb/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/niza,zb na el so prethodnik,nova niza kreiraj od zb/cmake-build-debug/CMakeFiles/rebuild_cache.dir
