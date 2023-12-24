@@ -1,0 +1,3 @@
+C:/Users/bojan/OneDrive/Desktop/strpr/- megju nepari dva broja string/cmake-build-debug/CMakeFiles/__megju_nepari_dva_broja_string.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/- megju nepari dva broja string/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/- megju nepari dva broja string/cmake-build-debug/CMakeFiles/rebuild_cache.dir
