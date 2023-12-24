@@ -1,0 +1,3 @@
+C:/Users/bojan/OneDrive/Desktop/strpr/string-zamena so naredna bukva od azbuka/cmake-build-debug/CMakeFiles/string_zamena_so_naredna_bukva_od_azbuka.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/string-zamena so naredna bukva od azbuka/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/bojan/OneDrive/Desktop/strpr/string-zamena so naredna bukva od azbuka/cmake-build-debug/CMakeFiles/rebuild_cache.dir
