@@ -1,0 +1,29 @@
+#include <iostream>
+#include<cstring>
+#include<cctype>
+using namespace std;
+int main() {
+    char niza[100];
+    int n, len;
+    cin>>n;
+    cin.ignore();
+    for (int i = 0; i < n; ++i)
+    {
+        cin.ignore();
+        cin.getline(niza,100);
+        int brojac=0;
+        len= strlen(niza);
+        for (int j = 0; j <= len-2 ; ++j) {
+           if(tolower(niza[j])=='a' && niza[j+1]=='1' && tolower(niza[j+2])=='c'){
+               brojac++;
+           }
+        }
+        if(brojac>=2){
+            for (int k = 0; k <len; k++) {
+                char mala= isalpha(niza[k])?tolower(niza[k]):niza[k];
+                cout<<mala;
+            }
+        }
+    }
+    return 0;
+}
