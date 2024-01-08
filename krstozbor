@@ -1,0 +1,140 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    char matrix[200][200];
+    int n;
+    cin>>n;
+    for (int i = 0; i <n ; ++i) {
+        for (int j = 0; j < n; ++j) {
+            cin>>matrix[i][j];
+        }
+    }
+    /*for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            cout<<matrix[i][j]<<" ";
+        }
+        cout<<endl;
+    }*/
+    char zbor[10];
+    bool flag=true;
+    bool flagHoriz=true;
+    bool flagDiag=true;
+    bool flagDiag2=true;
+    int x,y,x1,y1;
+    cin.ignore();
+    cin.getline(zbor,10);
+    int len= strlen(zbor);
+    //za vertikalno
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+             y=j;
+             x=i;
+            if(matrix[i][j]==zbor[0]){
+                for (int k = 0; k <=len ; ++k) {
+                    if(matrix[k][y]!=zbor[k]){
+                        flag=false;
+                        break;
+                    }
+                }
+            }
+            else if(matrix[i][j]==zbor[0]){
+                for (int k = len-1; k >=0 ; --k) {
+                    if(matrix[k][y]!=zbor[k]){
+                        flag=false;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    if(flag){
+        cout<<"Found vertik"<<endl;
+    }
+    else{
+        cout<<"No found vertik"<<endl;
+    }
+    // za horizontalno
+    for (int i = 0; i < n; ++i) {
+        int index=i;
+        for (int j = 0; j < n; ++j) {
+            if(matrix[i][j]==zbor[0]){
+                for (int k = 0; k <=len ; ++k) {
+                    if(matrix[index][k]!=zbor[k]){
+                        flagHoriz=false;
+                        break;
+                    }
+                }
+            }
+            else if(matrix[i][j]==zbor[0]){
+                for (int k = len-1; k >=0 ; --k) {
+                    if(matrix[index][k]!=zbor[k]){
+                        flagHoriz=false;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    if(flagHoriz){
+        cout<<"Found horiz"<<endl;
+    }
+    else{
+        cout<<"No found horiz"<<endl;
+    }
+    //za diagonalno
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            if(matrix[i][j]==zbor[0]){
+                for (int k = 0; k <= len; ++k) {
+                    if (matrix[i + 1][j + 1] != zbor[k]){
+                        flagDiag=false;
+                        break;
+                    }
+                }
+            }
+            else if(matrix[i][j]==zbor[0]){
+                for (int k = len-1; k >= 0 ; --k) {
+                    if(matrix[i+1][j+1]!=zbor[k]){
+                        flag=false;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    if(flagDiag){
+        cout<<"Found diag"<<endl;
+    }
+    else{
+        cout<<"No found diag"<<endl;
+    }
+    //za diagonalno obratno
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            if(matrix[i][j]==zbor[0]){
+                for (int k = 0; k <=len ; ++k) {
+                    if(matrix[i+k][j-k-1]!=zbor[k]){
+                        flagDiag2=true;
+                        break;
+                    }
+                }
+            }
+            else if(matrix[i][j]==zbor[0]){
+                for (int k = len-1; k >=0 ; --k) {
+                    if(matrix[k][j]!=zbor[0]){
+                        flagDiag2=true;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    if(flagDiag2){
+        cout<<"Found diag"<<endl;
+    }
+    else{
+        cout<<"No found diag"<<endl;
+    }
+    return 0;
+}
