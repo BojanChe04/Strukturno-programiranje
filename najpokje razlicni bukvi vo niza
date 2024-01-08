@@ -1,0 +1,41 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int brNaRazlicniBukvi(char niza[],int len) {
+    int brojac = 0;
+    for (int i = 0; i < len; ++i) {
+        bool flag=false;
+        for (int j = i + 1; j < len; ++j) {
+            if(niza[i]==niza[j]){
+                flag=true;
+                break;
+            }
+        }
+        if(!flag){
+            brojac++;
+        }
+    }
+    return brojac;
+}
+int main() {
+    char niza[100];
+    int redNaNIza=0;
+    int maxRed;
+    int maxRazlicniElemento=-99;
+    while(true) {
+        cin.getline(niza, 100);
+        redNaNIza++;
+        if(niza[0]=='#'){
+            break;
+        }
+        int len = strlen(niza);
+        //cout << brNaRazlicniBukvi(niza, len);
+        if(maxRazlicniElemento < brNaRazlicniBukvi(niza,len)){
+            maxRazlicniElemento = brNaRazlicniBukvi(niza,len);
+            maxRed=redNaNIza;
+        }
+    }
+    cout<<"red: "<<maxRed<<endl;
+    cout<<"br na karakteri: "<<maxRazlicniElemento<<endl;
+    return 0;
+}
