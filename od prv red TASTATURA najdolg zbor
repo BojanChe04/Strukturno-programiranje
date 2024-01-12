@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cstring>
+#include <cctype>
+using namespace std;
+bool DaliEodPrvRed(char bukva){
+    char prvRed[] = "zxcvbnm";
+    for (int i = 0; i <8 ; ++i) {
+        if(prvRed[i]==bukva){
+            return true;
+        }
+    }
+    return false;
+}
+int main() {
+    char niza[100];
+    char zbor[100];
+    char maxNiza[100];
+    int brojac = 0,maxDolzina=0;
+    while (true) {
+        cin.getline(niza, 100);
+        if (niza[0] == 'E' && niza[1] == 'O' && niza[2] == 'F') {
+            break;
+        }
+        int len = strlen(niza);
+        for (int i = 0; i <= len; ++i) {
+            if (!isspace(niza[i]) && niza[i] != '\0') {
+                zbor[brojac++] = niza[i];
+            } else {
+                zbor[brojac] = '\0';
+                if(DaliEodPrvRed(zbor[0])){
+                    if(maxDolzina<len){
+                        maxDolzina=len;
+                        strcpy(maxNiza,zbor);
+                    }
+                }
+                //cout << zbor << " ";
+                brojac = 0;
+            }
+        }
+    }
+    cout<<maxNiza;
+    return 0;
+}
