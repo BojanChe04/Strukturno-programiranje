@@ -1,0 +1,26 @@
+#include <iostream>
+#include<cstring>
+#include<string>
+#include<cctype>
+using namespace std;
+int main() {
+    char niza[100];
+    cin.getline(niza,100);
+    int len= strlen(niza);
+    int i;
+    for ( i = 0; i < len; ++i) {
+        char podniza[100];
+        int brojac=0;
+        while(islower(niza[i])){
+            podniza[brojac++]=niza[i++];
+        }
+        if(brojac>6){
+            for (int j = 0; j < brojac; ++j) {
+                cout<<podniza[j];
+            }
+            cout<<endl;
+        }
+        //i+=brojac;
+    }
+    return 0;
+}
