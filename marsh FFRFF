@@ -1,0 +1,29 @@
+#include <iostream>
+#include<cstring>
+#include<string>
+#include<cctype>
+using namespace std;
+int main() {
+    char naredba;
+    bool flag=true;
+    int brojac=0;
+    while(true){
+        cin>>naredba;
+        if(naredba=='.'){
+            break;
+        }
+        if(naredba=='F'){
+            if(flag) {
+                brojac++;
+            }
+            else{
+                brojac--;
+            }
+        }
+        else if(naredba=='R'){
+            flag=!flag;
+        }
+    }
+    cout<<brojac;
+    return 0;
+}
