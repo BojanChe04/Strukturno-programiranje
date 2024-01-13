@@ -1,0 +1,50 @@
+#include <iostream>
+#include<cstring>
+#include<string>
+#include<cctype>
+using namespace std;
+bool daliEprvRed(char bukva, char prvRed[]){
+    for (int i = 0; i < 8; ++i) {
+        if(prvRed[i]==bukva){
+            return true;
+        }
+    }
+    return false;
+}
+int indexodBukva ( int i, char vtorRed[]){
+    return vtorRed[i];
+}
+int indexBukvaoDprVREd(char bukva, char prvRed[]){
+    for (int i = 0; i < 8; ++i) {
+        if(prvRed[i]==bukva){
+            return i;
+        }
+    }
+}
+int main() {
+    char niza[100];
+    char prvRed[] = "zxcvbnm";
+    char vtorRed[]="asdfghjkl";
+    char tretRed[]="qwertyuiop";
+    int len;
+    while(true){
+        cin.getline(niza,100);
+        if(niza[0]=='E' && niza[1]=='O' && niza[2]=='F'){
+            break;
+        }
+        len= strlen(niza);
+        char nova[100];
+        int brojac=0;
+        for (int i = 0; i < len; ++i) {
+            if(daliEprvRed(niza[i],prvRed)){
+               // cout<<niza[i]<<" e vo prv red "<<endl;
+                int index;
+                index= indexBukvaoDprVREd(niza[i],prvRed);
+                niza[i] = indexodBukva(index,vtorRed);
+            }
+           cout<<niza[i];
+        }
+        cout<<endl;
+    }
+    return 0;
+}
