@@ -1,0 +1,98 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int tabla[100][100];
+    for (int i = 0; i < 8; ++i) {
+        for (int j = 0; j < 8; ++j) {
+            cin>>tabla[i][j];
+        }
+    }
+    int topX, topY;
+    cin>>topX>>topY;
+    for (int i = 0; i < 8; ++i) {
+        for (int j = 0; j < 8; ++j) {
+            if(i==topX && j==topY){
+                cout<<"T ";
+            }
+            else{
+                cout<<tabla[i][j]<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    tabla[topX][topY]=3;
+    //1 ista boja ko top
+   /* int istaBojaTopX, istaBojaTopY;
+    int figuraX, figuraY;
+    for (int i = 0; i < 8; ++i) {
+        for (int j = 0; j < 8; ++j) {
+            if(tabla[i][j]==1){
+                istaBojaTopX=i;
+                istaBojaTopY=j;
+            }
+            else if(tabla[i][j]==2){
+                figuraX=i;
+                figuraY=j;
+            }
+        }
+    }*/
+    //za dijagonala dolu desno
+    for (int i = topX, j=topY; i <8 && j<8 ; ++i,++j) {
+            if(tabla[i][j]==0){
+                cout<<"("<<i<<","<<j<<"), ";
+            }
+            else if(tabla[i][j]==1){
+                break;
+            }
+            else if(tabla[i][j]==2){
+                cout<<"("<<i<<","<<j<<"), -zema pozicija";
+                break;
+            }
+
+    }
+    //za dolu levo
+    for (int i = topX, j=topY; i <8 && j>=0 ; ++i,--j) {
+            if(tabla[i][j]==0){
+                cout<<"("<<i<<","<<j<<"), ";
+            }
+            else if(tabla[i][j]==1){
+                break;
+            }
+            else if(tabla[i][j]==2){
+                cout<<"("<<i<<","<<j<<"), -zema pozicija";
+                break;
+            }
+
+    }
+    //za gore desno
+    for (int i = topX, j=topY; i >=0 && j<8 ; --i,++j) {
+            if(tabla[i][j]==0){
+                cout<<"("<<i<<","<<j<<"), ";
+            }
+            else if(tabla[i][j]==1){
+                break;
+            }
+            else if(tabla[i][j]==2){
+                cout<<"("<<i<<","<<j<<"), -zema pozicija";
+                break;
+            }
+
+    }
+    //gore levo
+    for (int i = topX, j=topY; i >=0 && j>=0 ; --i,--j) {
+            if(tabla[i][j]==0){
+                cout<<"("<<i<<","<<j<<"), ";
+            }
+            else if(tabla[i][j]==1){
+                break;
+            }
+            else if(tabla[i][j]==2){
+                cout<<"("<<i<<","<<j<<"), -zema pozicija";
+                break;
+            }
+
+    }
+    return 0;
+}
