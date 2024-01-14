@@ -1,0 +1,89 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+   int tabla[100][100];
+    for (int i = 0; i < 8; ++i) {
+        for (int j = 0; j < 8; ++j) {
+            cin>>tabla[i][j];
+        }
+    }
+    int topX, topY;
+    cin>>topX>>topY;
+    for (int i = 0; i < 8; ++i) {
+        for (int j = 0; j < 8; ++j) {
+            if(i==topX && j==topY){
+                cout<<"T ";
+            }
+            else{
+                cout<<tabla[i][j]<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    //1 ista boja ko top
+    int istaBojaTopX, istaBojaTopY;
+    int figuraX, figuraY;
+    for (int i = 0; i < 8; ++i) {
+        for (int j = 0; j < 8; ++j) {
+            if(tabla[i][j]==1){
+                istaBojaTopX=i;
+                istaBojaTopY=j;
+            }
+            else if(tabla[i][j]==2){
+                figuraX=i;
+                figuraY=j;
+            }
+        }
+    }
+    // za nadolu
+    for (int i = topX; i < 8; ++i) {
+        if(tabla[i][topY]==0){
+            cout<<"("<<i<<","<<topY<<"), ";
+        }
+        else if(tabla[i][topY]==1){
+            break;
+        }
+        if(tabla[i][topY]==2){
+            cout<<"("<<i<<","<<topY<<"), -zema figura";
+        }
+    }
+    // za nagore
+    for (int i = topX; i >=0 ; --i) {
+        if(tabla[i][topY]==0){
+            cout<<"("<<i<<","<<topY<<"), ";
+        }
+        else if(tabla[i][topY]==1){
+            break;
+        }
+        if(tabla[i][topY]==2){
+            cout<<"("<<i<<","<<topY<<"), -zema figura";
+        }
+    }
+    // na levo
+    for (int j = topY; j >=0 ; --j) {
+        if(tabla[topX][j]==0){
+            cout<<"("<<topX<<","<<j<<"), ";
+        }
+        else if(tabla[topX][j]==1){
+            break;
+        }
+        if(tabla[topX][j]==2){
+            cout<<"("<<topX<<","<<j<<"), -zema figura";
+        }
+    }
+    //za nadesno
+    for (int j = topY; j <8 ; ++j) {
+        if(tabla[topX][j]==0){
+            cout<<"("<<topX<<","<<j<<"), ";
+        }
+        else if(tabla[topX][j]==1){
+            break;
+        }
+        if(tabla[topX][j]==2){
+            cout<<"("<<topX<<","<<j<<"), -zema figura";
+        }
+    }
+return 0;
+}
