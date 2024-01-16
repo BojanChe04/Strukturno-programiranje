@@ -1,0 +1,105 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+//nasoki na glava: 0-dolu, 1-desno, 2-gore, 3-levo
+int main()
+{
+    int n,m,ij,jj,zi=0,zj=0,nasoka=0;
+    int niva[100][100];
+    char potezi[1000];
+    cin>>n>>m>>ij>>jj;
+    cin.ignore();
+    cin.getline(potezi,1000);
+    niva[0][0]=-1;
+    for (int i = 0; i < strlen(potezi); ++i)
+    {
+        if(nasoka==0)
+        {
+            if(potezi[i]=='F')
+            {
+                zi++;
+            } else
+            if(potezi[i]=='L')
+            {
+                zj++;
+                nasoka=1;
+            } else
+            if(potezi[i]=='R')
+            {
+                zj--;
+                nasoka=3;
+            }
+        }
+        else
+        if(nasoka==1)
+        {
+            if(potezi[i]=='F')
+            {
+                zj++;
+            } else
+            if(potezi[i]=='L')
+            {
+                zi--;
+                nasoka=2;
+            } else
+            if(potezi[i]=='R')
+            {
+                zi++;
+                nasoka=0;
+            }
+        }
+        else
+        if(nasoka==2)
+        {
+            if(potezi[i]=='F')
+            {
+                zi--;
+            } else
+            if(potezi[i]=='L')
+            {
+                zj--;
+                nasoka=3;
+            } else
+            if(potezi[i]=='R')
+            {
+                zj++;
+                nasoka=1;
+            }
+        } else
+        {
+            if(potezi[i]=='F')
+            {
+                zj--;
+            } else
+            if(potezi[i]=='L')
+            {
+                zi++;
+                nasoka=0;
+            } else
+            if(potezi[i]=='R')
+            {
+                zi--;
+                nasoka=2;
+            }
+        }
+        if(zi>=n || zj>=m || zi<0 || zj<0)
+        {
+            cout<<"GAME OVER Ouch"<<endl;
+            return 0;
+        }
+        niva[zi][zj]= -1; //veke bila tamu
+        if(zi==ij && zj==jj)
+        {
+            cout<<"NJAM"<<endl;
+            return 0;
+        }
+    }
+    if(niva[zi][zj]==-1) {
+        cout << "GAME OVER Ouch" << endl;
+    }
+    else
+    {
+        cout<<"GAMEOVER"<<endl;
+    }
+    return 0;
+}
